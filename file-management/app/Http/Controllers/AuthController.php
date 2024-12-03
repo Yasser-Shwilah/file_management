@@ -18,7 +18,8 @@ class AuthController extends Controller
     public function __construct(AuthService $authService)
     {
         $this->authservice = $authService;
-        $this->middleware('log.service.calls');
+       // $this->middleware('log.service.calls');
+        $this->middleware('aspect.middleware');
     }
 
     public function register(RegisterRequest $request)
