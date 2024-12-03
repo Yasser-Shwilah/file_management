@@ -19,7 +19,8 @@ class AdminAuthController extends Controller
     {
         $this->adminauthservice = $adminauthservice;
 
-        $this->middleware('log.service.calls');
+        //$this->middleware('log.service.calls');
+        $this->middleware('aspect.middleware');
     }
 
     public function register(RegisterRequest $request)
